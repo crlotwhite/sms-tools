@@ -1,6 +1,40 @@
 sms-tools
 ========= 
 
+How to install in 2025 for coursera course.
+
+Windows Evironment
+
+Install Ubuntu 18.04
+```
+wsl --install Ubuntu-18.04
+```
+
+Install python and dependencies
+```
+sudo apt update -y && sudo apt upgrade -y && sudo apt install -y build-essential
+sudo apt install python2.7
+sudo apt install python-pip
+git clone https://github.com/MTG/sms-tools.git
+cd sms-tools/
+git checkout 762d2006d3ab1a730a49a6a36179861332135ee8
+sudo apt-get install python-dev ipython python-numpy python-matplotlib python-scipy cython
+cd software/models/utilFunctions_C/
+python2.7 compileModule.py build_ext --inplace
+```
+
+Test
+```
+cd software/models_interface
+python models_GUI.py 
+```
+
+Mac os
+WIP...
+
+original README.md
+=========
+
 Sound analysis/synthesis tools for music applications written in python.
 
 The package includes the following sound analysis/synthesis models:
